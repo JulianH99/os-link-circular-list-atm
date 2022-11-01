@@ -32,6 +32,7 @@ class ATM:
             while temp.next is not None and temp.next != self.head:
                 temp = temp.next
             temp.next = node
+            node.next = self.head
             
 
 
