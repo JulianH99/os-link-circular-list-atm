@@ -39,16 +39,15 @@ class ATM:
     def print_list(self):
         head = self.head
 
-        while(head):
+        while head and head != self.head:
             print(f"Node {head}")
 
             head = head.next
 
     def process_atm_line(self) -> None:
-        head = self.head
-        first_in_line = head.next
+        first_in_line = self.head.next
 
-        while first_in_line:
+        while first_in_line and first_in_line != self.head:
             print(f"Processing customer {first_in_line}")
             first_in_line.process_node()
             first_in_line = first_in_line.next
